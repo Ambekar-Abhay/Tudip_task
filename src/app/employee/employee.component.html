@@ -8,7 +8,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let employee of employeeDetails;let i=index">
+      <tr *ngFor="let employee of employeeDetails;let i=index;trackBy:employeeTrackById">
         <th scope="row">{{employee.ID}}</th>
         <td>{{employee.Title}}</td>
         <td>{{employee.PageCount}}</td>

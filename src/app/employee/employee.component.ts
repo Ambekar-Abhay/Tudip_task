@@ -23,4 +23,8 @@ getEmployeeDetails(){
     alert(error.error)
   })
 }
+employeeTrackById(index:number,employee:any){
+  return employee.ID
+
+}
 }
