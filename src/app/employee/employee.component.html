@@ -1,1 +1,18 @@
-<p>employee works!</p>
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Salary</th>
+        <th scope="col">age</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employeeDetails;let i=index">
+        <th scope="row">{{employee.ID}}</th>
+        <td>{{employee.Title}}</td>
+        <td>{{employee.PageCount}}</td>
+        <td>{{employee.Title}}</td>
+      </tr>
+    </tbody>
+  </table>

@@ -8,7 +8,7 @@ export class ApiService {
   constructor(private http:HttpClient) { }
 
   getEmployee(){
-    const path='http://dummy.restapiexample.com/api/v1/employees'
-    this.http.get(path)
+    const path='http://fakerestapi.azurewebsites.net/api/Books'
+    return this.http.get(path)
   }
 }

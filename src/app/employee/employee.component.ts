@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from '../shared/api.service';
 
 @Component({
   selector: 'app-employee',
@@ -6,10 +7,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./employee.component.css']
 })
 export class EmployeeComponent implements OnInit {
+  employeeDetails: Object;
 
-  constructor() { }
+  constructor(private apiservice:ApiService) { }
 
   ngOnInit(): void {
+    this.getEmployeeDetails()
   }
-
+getEmployeeDetails(){
+  this.apiservice.getEmployee().subscribe(resp=>{
+    if(resp){
+      this.employeeDetails=resp
+    }
+  },error=>{
+    alert(error.error)
+  })
+}
 }
